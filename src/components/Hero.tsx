@@ -174,10 +174,6 @@ export default function Hero() {
     }
   };
 
-  const downloadAllImages = () => {
-    // In a real implementation, this would create a zip file of all compressed images
-    alert("In a real implementation, this would download a zip file with all compressed images.");
-  };
 
   // Calculate total compression stats
   const totalOriginalSize = files.reduce((sum, file) => sum + file.size, 0);
