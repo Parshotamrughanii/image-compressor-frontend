@@ -23,7 +23,14 @@ let socket: Socket | null = null;
 
 // Only initialize socket on client side
 if (typeof window !== 'undefined') {
-  socket = io("https://image-commpressor-backend-ldetb.ondigitalocean.app");
+  socket = io("https://api.parshotamrughani.com/", {
+    transports: ["websocket"], // Enforce WebSocket transport
+    secure: true, // Ensure secure connection
+    reconnection: true, // Auto-reconnect on disconnection
+    reconnectionAttempts: 10, // Try reconnecting 10 times before failing
+    reconnectionDelay: 2000, // Delay between reconnections (2s)
+    timeout: 15000, // Timeout for connection
+  });
 }
 
 export default function Hero() {
@@ -72,7 +79,7 @@ export default function Hero() {
     fileObjects.forEach(({ file }) => formData.append("images", file));
 
     try {
-      await fetch("https://image-commpressor-backend-ldetb.ondigitalocean.app/upload", {
+      await fetch("https://api.parshotamrughani.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -155,7 +162,7 @@ export default function Hero() {
       setCompressedImages([]);
       setIsCompressing(true);
       
-      fetch("https://image-commpressor-backend-ldetb.ondigitalocean.app/upload", {
+      fetch("https://api.parshotamrughani.com/upload", {
         method: "POST",
         body: formData,
       }).catch(error => {
