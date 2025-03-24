@@ -29,7 +29,7 @@ if (typeof window !== 'undefined') {
     reconnection: true, // Auto-reconnect on disconnection
     reconnectionAttempts: 10, // Try reconnecting 10 times before failing
     reconnectionDelay: 2000, // Delay between reconnections (2s)
-    timeout: 15000, // Timeout for connection
+    timeout: 50000, // Timeout for connection
   });
 }
 
