@@ -40,27 +40,48 @@ export default function Hero() {
   const [dragActive, setDragActive] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // useEffect(() => {
+  //   if (!socket) return;
+
+  //   // Listen for compression updates
+  //   socket.on("imageCompressed", (data: CompressedImage) => {
+  //     setCompressedImages((prev) => [...prev, data]);
+  //   });
+
+  //   socket.on("allImagesCompressed", () => {
+  //     setIsCompressing(false);
+  //     // Optional: show a notification
+  //     // alert("All images compressed!");
+  //   });
+
+  //   return () => {
+  //     if (socket) {
+  //       socket.off("imageCompressed");
+  //       socket.off("allImagesCompressed");
+  //     }
+  //   };
+  // }, []);
   useEffect(() => {
-    if (!socket) return;
+  if (!socket) return;
 
-    // Listen for compression updates
-    socket.on("imageCompressed", (data: CompressedImage) => {
-      setCompressedImages((prev) => [...prev, data]);
-    });
+  // Listen for each compressed image and update state immediately
+  socket.on("imageCompressed", (data: CompressedImage) => {
+    setCompressedImages((prev) => [...prev, data]);
+  });
 
-    socket.on("allImagesCompressed", () => {
-      setIsCompressing(false);
-      // Optional: show a notification
-      // alert("All images compressed!");
-    });
+  // Only stop the loading state when all images are compressed
+  socket.on("allImagesCompressed", () => {
+    setIsCompressing(false);
+  });
 
-    return () => {
-      if (socket) {
-        socket.off("imageCompressed");
-        socket.off("allImagesCompressed");
-      }
-    };
-  }, []);
+  return () => {
+    if (socket) {
+      socket.off("imageCompressed");
+      socket.off("allImagesCompressed");
+    }
+  };
+}, []);
+
 
   const handleUpload = async (selectedFiles: FileList | null) => {
     if (!selectedFiles || selectedFiles.length === 0) return;
