@@ -245,7 +245,7 @@ export default function Hero() {
           const blob = await response.blob();
           
           // Add to zip with the original filename
-          zip.file(`compressed_${img.fileName}`, blob);
+          zip.file(`${img.fileName}`, blob);
           
           return true;
         } catch (error) {
