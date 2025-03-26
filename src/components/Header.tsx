@@ -12,7 +12,7 @@ export default function Header() {
                 C
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent">
-                CompressX
+                CompressClick
               </span>
             </Link>
           </div>

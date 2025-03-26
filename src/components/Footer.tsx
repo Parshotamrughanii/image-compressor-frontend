@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                CompressX
+              CompressClick
               </span>
             </Link>
             <p className="text-gray-400 mb-4">
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-[#2a1f40] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} CompressX. All rights reserved.
+            &copy; {new Date().getFullYear()} CompressClick. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <select className="bg-[#1a1530] text-gray-400 text-sm rounded-md px-3 py-1 border border-[#2a1f40] focus:outline-none focus:ring-2 focus:ring-purple-500">

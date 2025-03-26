@@ -5,8 +5,8 @@ import { useState } from 'react';
 export default function FAQ() {
   const faqs = [
     {
-      question: "Is CompressX free to use?",
-      answer: "Yes, CompressX offers a free tier that allows you to compress up to 20 images per day with a file size limit of 5MB each. For higher limits and additional features, we offer premium plans."
+      question: "Is CompressClick free to use?",
+      answer: "Yes, CompressClick offers a free tier that allows you to compress up to 20 images per day with a file size limit of 5MB each. For higher limits and additional features, we offer premium plans."
     },
     {
       question: "How much can images be compressed?",
@@ -14,7 +14,7 @@ export default function FAQ() {
     },
     {
       question: "What image formats are supported?",
-      answer: "CompressX supports all popular image formats including JPG, PNG, WebP, GIF, BMP, and TIFF. You can also convert between formats during compression."
+      answer: "CompressClick supports all popular image formats including JPG, PNG, WebP, GIF, BMP, and TIFF. You can also convert between formats during compression."
     },
     {
       question: "Is my data secure?",
@@ -30,7 +30,7 @@ export default function FAQ() {
     },
     {
       question: "Is there a mobile app available?",
-      answer: "Currently, CompressX is available as a web application that works on all devices including mobile phones and tablets. A dedicated mobile app is in development and will be released soon."
+      answer: "Currently, CompressClick is available as a web application that works on all devices including mobile phones and tablets. A dedicated mobile app is in development and will be released soon."
     },
     {
       question: "How do I get support if I have issues?",
