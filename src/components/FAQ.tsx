@@ -6,7 +6,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Is CompressClick free to use?",
-      answer: "Yes, CompressClick offers a free tier that allows you to compress up to 20 images per day with a file size limit of 5MB each. For higher limits and additional features, we offer premium plans."
+      answer: "CompressClick is totally free! You can compress unlimited images with no daily limits and no file size restrictions"
     },
     {
       question: "How much can images be compressed?",

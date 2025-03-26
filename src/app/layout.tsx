@@ -16,9 +16,73 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CompressClick - Advanced Image Compression Tool",
-  description: "Compress your images without losing quality. Reduce file size by up to 90% while maintaining visual quality. Perfect for websites, apps, and sharing.",
-  keywords: ["image compression", "compress images", "image optimizer", "reduce image size", "image compressor"],
+  title: "CompressClick - Free AI-Powered Image Compression Tool",
+  description: "Compress your images without losing quality using our advanced AI technology. Reduce file size by up to 90% while maintaining visual quality. Free, no signup required, and perfect for websites, apps, and sharing.",
+  keywords: [
+    "image compression", 
+    "compress images", 
+    "image optimizer", 
+    "reduce image size", 
+    "image compressor", 
+    "free image compression", 
+    "AI image compression", 
+    "lossless compression", 
+    "bulk image compression", 
+    "compress photos online",
+    "optimize images for web",
+    "reduce image file size",
+    "compress PNG",
+    "compress JPG",
+    "compress JPEG",
+    "compress WebP"
+  ],
+  authors: [{ name: "CompressClick Team" }],
+  creator: "CompressClick",
+  publisher: "CompressClick",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://compressclick.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "CompressClick - Free AI-Powered Image Compression Tool",
+    description: "Compress your images without losing quality using our advanced AI technology. Reduce file size by up to 90% while maintaining visual quality.",
+    url: "https://compressclick.com",
+    siteName: "CompressClick",
+    images: [
+      {
+        url: "https://compressclick.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CompressClick - Image Compression Tool",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CompressClick - Free AI-Powered Image Compression Tool",
+    description: "Compress your images without losing quality using our advanced AI technology. Reduce file size by up to 90%.",
+    images: ["https://compressclick.com/twitter-image.jpg"],
+    creator: "@compressclick",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
