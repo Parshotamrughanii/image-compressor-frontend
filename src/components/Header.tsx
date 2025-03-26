@@ -17,12 +17,7 @@ const router = useRouter()
   }, []);
 
   // Scroll to hero section
-  const scrollToHero = () => {
-    const heroSection = document.getElementById('hero-section');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
   return (
     <header 
