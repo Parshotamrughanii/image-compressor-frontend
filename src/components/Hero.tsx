@@ -245,7 +245,7 @@ export default function Hero() {
           const blob = await response.blob();
           
           // Add to zip with the original filename
-          zip.file(`compressed_${img.fileName}`, blob);
+          zip.file(`${img.fileName}`, blob);
           
           return true;
         } catch (error) {
@@ -261,7 +261,7 @@ export default function Hero() {
       const zipBlob = await zip.generateAsync({ type: 'blob' });
       
       // Save the zip file
-      saveAs(zipBlob, 'compressed_images.zip');
+      saveAs(zipBlob, 'compressClick_images.zip');
     } catch (error) {
       console.error('Error creating zip file:', error);
       alert('Failed to create zip file. Please try again.');
