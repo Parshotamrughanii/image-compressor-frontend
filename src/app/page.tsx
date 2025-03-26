@@ -5,10 +5,14 @@ import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <Head>
+      <link rel="canonical" href="https://www.compressclick.com/" />
+      </Head>
       <Header />
       <main>
         <Hero />
