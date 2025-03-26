@@ -28,7 +28,7 @@ let socket: Socket | null = null;
 
 // Only initialize socket on client side
 if (typeof window !== 'undefined') {
-  socket = io("http://localhost:7000/", {
+  socket = io("https://www.compressclick.com/", {
     transports: ["websocket"], // Enforce WebSocket transport
     secure: true, // Ensure secure connection
     reconnection: true, // Auto-reconnect on disconnection
@@ -119,7 +119,7 @@ export default function Hero() {
       );
       
       // Send to server for compression
-      await fetch("http://localhost:7000/upload-single", {
+      await fetch("https://www.compressclick.com/upload-single", {
         method: "POST",
         body: formData,
       });
