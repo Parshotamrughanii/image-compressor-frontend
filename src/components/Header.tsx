@@ -1,10 +1,11 @@
 'use client'
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-
+const router = useRouter()
   // Handle scroll event to change header appearance
   useEffect(() => {
     const handleScroll = () => {
@@ -84,15 +85,39 @@ export default function Header() {
             >
               <span itemProp="name">FAQ</span>
             </Link>
+            <Link 
+              href="/terms-and-conditions" 
+              className="text-gray-600 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors"
+              itemProp="url"
+              aria-label="Terms And Conditions"
+            >
+              <span itemProp="name">Terms And Condtions</span>
+            </Link>
+            <Link 
+              href="/privacy-policy" 
+              className="text-gray-600 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors"
+              itemProp="url"
+              aria-label="Privacy Policy"
+            >
+              <span itemProp="name">Privacy Policy</span>
+            </Link>
+            <Link 
+              href="/about" 
+              className="text-gray-600 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition-colors"
+              itemProp="url"
+              aria-label="About"
+            >
+              <span itemProp="name">About Us</span>
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
             {/* <ThemeToggle /> */}
             <button 
-              onClick={scrollToHero}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg transition-all shadow-md hover:shadow-lg"
+              onClick={()=>router.push('/contact')}
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 cursor-pointer hover:from-purple-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg transition-all shadow-md hover:shadow-lg"
               aria-label="Get Started with CompressClick"
             >
-              Get Started
+              Contact Us
             </button>
           </div>
         </div>
