@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Head from "next/head";
 
 
 const geistSans = Geist({
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "CompressClick",
     images: [
       {
-        url: "https://compressclick.com/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "CompressClick - Image Compression Tool",
@@ -92,6 +93,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+         <Head>
+        {/* JSON-LD Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "CompressClick",
+              "url": "https://www.compressclick.com/"
+            }),
+          }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
